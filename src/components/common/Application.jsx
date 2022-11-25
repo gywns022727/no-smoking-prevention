@@ -19,7 +19,7 @@ export default function Application() {
       return card.tagName !== "BUTTON";
     };
     domtoimage.toBlob(card, { filter: filter }).then((blob) => {
-      saveAs(blob, "프로젝트 신청서.jpg");
+      saveAs(blob, "노담 서약서.jpg");
     });
   };
 
@@ -74,6 +74,7 @@ export default function Application() {
 const Div = styled.div`
   padding: 10px;
   margin: 10px;
+  border: 5px solid #ff3c38;
 `;
 
 const Container = styled.div`
@@ -84,8 +85,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
 const Section = styled.div`
-  background: #7897d1;
+  background: whitesmoke;
 `;
 
 const Footer = styled.div`
@@ -111,7 +113,7 @@ const OutBtn = styled.button`
   font-size: 14px;
   font-weight: 300;
   color: white;
-  background: #4679d6;
+  background: #ff3c38;
   text-align: center;
   justify-content: center;
 `;
@@ -124,9 +126,9 @@ const Box = styled.div`
   padding: 10px;
   width: 150px;
   height: 100px;
-  border: 5px solid white;
+  border: 5px solid #ff3c38;
   color: white;
-  background: #4679d6;
+  background: white;
 `;
 
 const Btn = styled.button`
@@ -138,11 +140,8 @@ const Btn = styled.button`
   font-size: 14px;
   font-weight: 300;
   color: white;
-  background: #7897d1;
+  background: #ff3c38;
   &:focus {
     outline: none;
-  }
-  &:hover {
-    border: 2px solid #8ce3e9;
   }
 `;

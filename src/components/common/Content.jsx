@@ -14,7 +14,7 @@ export default function Content() {
 
 const Container = styled.main`
   width: 400px;
-  height: 500px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import CheckBox from "components/common/CheckBox";
+import Calendar from "../../images/calendar.png";
+import check from "../../images/check.png";
 
 export default function PersonnelSelect() {
   return (
     <Container>
-      <CheckBox />
-      <Title>인원</Title>
-      <Input
-        type={"text"}
-        placeholder="참여 인원을 적어주세요"
-        autoComplete={"off"}
-      />
+      <img src={check} alt="" />
+      <Title>작성일</Title>
+      <Input type={"date"} autoComplete={"off"} />
     </Container>
   );
 }
@@ -22,14 +19,18 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  > img {
+    width: 24px;
+    margin-right: 10px;
+  }
 `;
 
 const Title = styled.p`
-  width: 30px;
-  padding-right: 20px;
-  color: white;
+  width: 45px;
+  color: black;
+  margin-right: 10px;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: bold;
 `;
 
 const Input = styled.input`
@@ -40,15 +41,22 @@ const Input = styled.input`
   font-size: 14px;
   font-weight: 400;
   color: white;
-  background: #4679d6;
+  background: #ff3c38;
   text-align: center;
   &:focus {
     outline: none;
   }
   &::placeholder {
     color: #eee;
-    opacity: 0.8;
     font-size: 12px;
     font-weight: 300;
+  }
+  &::-webkit-calendar-picker-indicator {
+    margin-top: 5px;
+    padding-right: 15px;
+    width: 20px;
+    height: 20px;
+    background: url(${Calendar});
+    background-repeat: no-repeat;
   }
 `;

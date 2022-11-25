@@ -1,3 +1,3 @@
 export default defaultTheme = {
-    background: '#7897d1'
-}
+  background: "#7897d1",
+};

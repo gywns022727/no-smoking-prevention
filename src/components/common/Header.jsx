@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import nodam from "../../images/nodam.png";
 
 export default function Header() {
   return (
     <Container>
       <Title>
-        <Logo src="/images/schoolLogo.png" />
-        프로젝트 신청서
-        <Logo src="/images/schoolLogo.png" />
+        <Logo src={nodam} />
+        노담 서약서
+        <Logo src={nodam} />
       </Title>
     </Container>
   );
@@ -23,8 +24,7 @@ const Title = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  padding: 0 5px 0 5px;
+  color: #ff3c38;
   font-size: 2.2rem;
   font-weight: 500;
   text-align: center;

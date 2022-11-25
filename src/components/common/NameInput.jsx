@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import CheckBox from "components/common/CheckBox";
+import check from "../../images/check.png";
 
 export default function NameInput() {
   return (
     <Container>
-      <CheckBox />
-      <Title>이름</Title>
+      <img src={check} alt="" />
+      <Title>학교명</Title>
       <Input
         type={"text"}
-        placeholder="프로젝트 명을 입력해주세요"
+        placeholder="학교명을 입력해주세요"
         autoComplete={"off"}
       />
     </Container>
@@ -22,14 +22,18 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  > img {
+    width: 24px;
+    margin-right: 10px;
+  }
 `;
 
 const Title = styled.p`
-  width: 30px;
-  padding-right: 20px;
-  color: white;
+  width: 45px;
+  color: black;
+  margin-right: 10px;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: bold;
 `;
 
 const Input = styled.input`
@@ -40,15 +44,14 @@ const Input = styled.input`
   font-size: 14px;
   font-weight: 400;
   color: white;
-  background: #4679d6;
+  background: #ff3c38;
   text-align: center;
   &:focus {
     outline: none;
   }
   &::placeholder {
     color: #eee;
-    opacity: 0.8;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
   }
 `;

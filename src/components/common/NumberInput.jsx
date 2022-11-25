@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import CheckBox from "components/common/CheckBox";
 import { useForm } from "react-hook-form";
+import check from "../../images/check.png";
 
 export default function NumberInput() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -23,15 +23,15 @@ export default function NumberInput() {
 
   return (
     <Container>
-      <CheckBox />
-      <Title> 번호</Title>
+      <img src={check} alt="" />
+      <Title>연락처</Title>
       <Input
         type="text"
         name="phoneNumber"
         minLength={13}
         maxLength={13}
         value={phoneNumber}
-        placeholder="PM의 번호를 적어주세요"
+        placeholder="숫자만 입력해 주세요"
         autoComplete={"off"}
         {...register("phoneNumber", {
           onChange: (e) => {
@@ -49,14 +49,18 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  > img {
+    width: 24px;
+    margin-right: 10px;
+  }
 `;
 
 const Title = styled.p`
-  width: 30px;
-  padding-right: 20px;
-  color: white;
+  width: 45px;
+  color: black;
+  margin-right: 10px;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: bold;
 `;
 
 const Input = styled.input`
@@ -67,14 +71,13 @@ const Input = styled.input`
   font-size: 14px;
   font-weight: 400;
   color: white;
-  background: #4679d6;
+  background: #ff3c38;
   text-align: center;
   &:focus {
     outline: none;
   }
   &::placeholder {
     color: #eee;
-    opacity: 0.8;
     font-size: 12px;
     font-weight: 300;
   }

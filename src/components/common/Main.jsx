@@ -7,9 +7,7 @@ import TextArea from "components/common/TextArea";
 
 export default function Main() {
   const [Give, setGive] = useState("");
-  const [Take, setTake] = useState("");
   const GiveChange = (e) => setGive(e.target.value);
-  const TakeChange = (e) => setTake(e.target.value);
 
   return (
     <Container>
@@ -22,28 +20,16 @@ export default function Main() {
           onChange={GiveChange}
           autoComplete={"off"}
         />
-        이/가
-        <Input
-          type={"text"}
-          name="Give"
-          value={Take}
-          maxLength={3}
-          onChange={TakeChange}
-          autoComplete={"off"}
-        />
-        에게 프로젝트를 신청합니다.
+        은/는 노담을 약속 합니다!
       </Title>
       <Section>
-        <NameInput />
         <PersonnelInput />
+        <NameInput />
         <NumberInput />
         <TextArea />
       </Section>
       <Text>
-        신청하는 사람<Data>{Give}</Data>(인)
-      </Text>
-      <Text>
-        신청받는 사람<Data>{Take}</Data>(인)
+        작성자<Data>{Give}</Data>(인)
       </Text>
     </Container>
   );
@@ -51,7 +37,7 @@ export default function Main() {
 
 const Container = styled.div`
   width: 400px;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,9 +46,9 @@ const Container = styled.div`
 
 const Title = styled.p`
   width: 100%;
-  color: white;
+  color: black;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: bold;
   text-align: center;
 `;
 
@@ -73,7 +59,7 @@ const Input = styled.input`
   border-radius: 15px;
   border: none;
   color: white;
-  background: #4679d6;
+  background: #ff3c38;
   text-align: center;
   &:focus {
     outline: none;
@@ -99,9 +85,9 @@ const Text = styled.p`
   align-items: center;
   padding-bottom: 5px;
   text-align: center;
-  font-style: 12px;
-  font-weight: 300;
-  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
 `;
 
 const Data = styled.span`

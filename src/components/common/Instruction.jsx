@@ -14,22 +14,14 @@ export default function Instruction() {
         <Container>
           <Box>
             <MainTitle>사용 방법</MainTitle>
-            <hr />
+            <Line />
             <br />
             <div>
               <Text>&nbsp;&nbsp;- 주의사항을 꼭! 읽어주세요.</Text>
-              <Text>&nbsp;&nbsp;- 이름에는 프로젝트 이름을 입력해주세요.</Text>
-              <Text>
-                &nbsp;&nbsp;- 인원에는 프로젝트 총인원수를 입력해주세요.
-              </Text>
-              <Text>
-                &nbsp;&nbsp;- 번호에는 PM(Project Management)의 번호를
-                입력해주세요.
-              </Text>
-              <Text>
-                &nbsp;&nbsp;- 설명에는 프로젝트에 관한 간단한 설명을
-                입력해주세요.
-              </Text>
+              <Text>&nbsp;&nbsp;- 작성일자를 선택해 주세요.</Text>
+              <Text>&nbsp;&nbsp;- 학교명을 적어주세요.</Text>
+              <Text>&nbsp;&nbsp;- 연락처를 적어주세요.</Text>
+              <Text>&nbsp;&nbsp;- 자신의 다짐을 한 줄로 적어주세요.</Text>
               <Text>
                 &nbsp;&nbsp;- 링크 복사하기를 클릭하면 현재 웹 사이트 URL이
                 복사됩니다.
@@ -57,7 +49,7 @@ const InstructionsBtn = styled.button`
   font-size: 14px;
   font-weight: 300;
   color: white;
-  background: #4679d6;
+  background: #ff3c38;
   text-align: center;
 `;
 
@@ -66,6 +58,10 @@ const contentStyle = {
   height: "100%",
   background: "rgba(0,0,0,.5)",
 };
+
+const Line = styled.hr`
+  border: 1px solid white;
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -80,10 +76,10 @@ const Box = styled.div`
   z-index: 100;
   padding: 10px;
   width: 450px;
-  height: 250px;
+  height: 280px;
   border: 5px solid white;
   color: white;
-  background: #4679d6;
+  background: #ff3c38;
   @media screen and (max-width: 500px) {
     width: 320px;
     height: auto;
@@ -91,10 +87,10 @@ const Box = styled.div`
 `;
 
 const MainTitle = styled.h1`
-  color: #8ce3e9;
+  color: white;
   text-align: center;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: bold;
   padding-bottom: 10px;
 `;
 
@@ -113,7 +109,7 @@ const Close = styled.button`
   border: none;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 300;
-  color: white;
-  background: #7897d1;
+  font-weight: bold;
+  color: #ff3c38;
+  background: white;
 `;
