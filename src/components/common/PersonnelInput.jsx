@@ -8,7 +8,11 @@ export default function PersonnelSelect() {
     <Container>
       <img src={check} alt="" />
       <Title>작성일</Title>
-      <Input type={"date"} autoComplete={"off"} />
+      <Input
+        type={"text"}
+        autoComplete={"off"}
+        placeholder="작성일을 입력해주세요"
+      />
     </Container>
   );
 }
@@ -50,13 +54,5 @@ const Input = styled.input`
     color: #eee;
     font-size: 12px;
     font-weight: 300;
-  }
-  &::-webkit-calendar-picker-indicator {
-    margin-top: 5px;
-    padding-right: 15px;
-    width: 20px;
-    height: 20px;
-    background: url(${Calendar});
-    background-repeat: no-repeat;
   }
 `;
