@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Calendar from "../../images/calendar.png";
 import check from "../../images/check.png";
 
 export default function PersonnelSelect() {

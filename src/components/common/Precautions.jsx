@@ -17,9 +17,7 @@ export default function Precautions() {
     >
       {(close) => (
         <Box>
-          <MainTitle>
-            이건 꼭 지켜주세요!<Warning>&nbsp;(제작자의 경험담 입니다)</Warning>
-          </MainTitle>
+          <MainTitle>지금부터 노담 약속!</MainTitle>
           <Line />
           <br />
           <div>
@@ -91,11 +89,6 @@ const MainTitle = styled.h1`
   @media screen and (max-width: 700px) {
     font-size: 18px;
   }
-`;
-
-const Warning = styled.span`
-  font-size: 16px;
-  font-weight: 300;
 `;
 
 const Title = styled.h3`

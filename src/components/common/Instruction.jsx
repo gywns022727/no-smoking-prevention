@@ -18,7 +18,7 @@ export default function Instruction() {
             <br />
             <div>
               <Text>&nbsp;&nbsp;- 주의사항을 꼭! 읽어주세요.</Text>
-              <Text>&nbsp;&nbsp;- 작성일자를 선택해 주세요.</Text>
+              <Text>&nbsp;&nbsp;- 작성일자를 적어주세요.</Text>
               <Text>&nbsp;&nbsp;- 학교명을 적어주세요.</Text>
               <Text>&nbsp;&nbsp;- 연락처를 적어주세요.</Text>
               <Text>&nbsp;&nbsp;- 자신의 다짐을 한 줄로 적어주세요.</Text>
